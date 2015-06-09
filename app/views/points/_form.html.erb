@@ -1,0 +1,24 @@
+
+
+<%= form_for [@route, @point] do |f| %>
+<%= f.label :point_name %>
+<%= f.text_field :point_name %>
+<br>
+<%= f.label :point_description %>
+<%= f.text_field :point_description %>
+<br>
+<%= f.label :point_date %>
+<%= f.date_select :point_date, :order =>[:day, :month, :year] %>
+<br>
+<%= f.label :point_photo %>
+<%= f.text_field :point_photo %>
+<br>
+<%= f.label :address%>
+<%= f.text_field :address%>
+<br>
+
+<%= f.submit 'Save' %>
+
+<% end %>
+
+	<%= link_to('Back to the route', route_points_path)%>

@@ -1,0 +1,17 @@
+<br>
+
+<h1> <%= @route.route_name %> </h1>
+<ul>
+<li>  <p><%= @route.route_country %></p>
+ 	  <p><%= @route.route_description %></p>
+ 	  <p>Date: <%= @route.route_date%></p></li>
+ 
+
+
+
+ 	  <p><img src= <%= @route.route_photo%>  height="200" width="400"></p>
+	<%= link_to('Show me this route', routes_path)%>
+	<%= link_to('Add new point in this route',  new_route_point_path(@route))%>
+</ul>
+
+<%= link_to('Back to routes', route_points_path(@route))%>

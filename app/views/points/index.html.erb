@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+<ul id="routes">
+
+
+
+    <p>Please, add new points to this route! :)</p>
+    <%= link_to('Add new point in this route',  new_route_point_path)%>
+
+
+<% @points.each do |point| %>
+<li>
+
+
+<h1><%= point.point_name %> </h1>
+
+
+
+<img src=  <%=point.point_photo%>  height="400" width="400">
+
+Description:<%= point.point_description %>
+Date:<%= point.point_date%>
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=350x250&sensor=false&zoom=6&markers=#{point.latitude}%2C#{point.longitude}" %>
+
+
+
+
+</li>
+<hr>
+<% end %>
+</ul>
+
+	
+	<%= link_to('Back to routes', routes_path)%>
+
+</body>
+
+</html>

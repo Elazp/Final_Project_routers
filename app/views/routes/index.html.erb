@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="index.css">
+
+        <title></title>
+    </head>
+
+    <body>
+
+
+
+	<h1  class="index_title"> Routes by country </h1>
+	<br>
+	
+	<% @last_routes.each do |route| %>
+
+		
+		<div id="routes"><span id="route_name"><strong><%= route.route_name%></strong></span>
+			- <%= route.route_country%>
+			<p><%= route.route_description%></p>
+			Date:<p><%= route.route_date%></p>
+			<p><img src=  <%=route.route_photo%>  height="200" width="300"></p>
+			<%= link_to('Show this route', route_points_path(route))%>
+			<%= link_to 'Destroy',route_path(route), method: :delete, data: {confim: "Are you sure?"} %></div>
+			<br><br>
+			<hr>
+	
+	<% end %>
+
+
+
+	
+
+	<%= link_to('Add new route', new_route_path)%>
+	<%= link_to('Home', root_path)%>
+
+
+    <script type="text/javascript" src=""></script>
+    </body>
+</html>

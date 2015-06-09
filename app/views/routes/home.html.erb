@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="home.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <title></title>
+    </head>
+
+
+    <body>
+
+      
+
+    	
+
+  <h1  class="index_title"> Latest routes </h1>
+
+   <br>
+  
+   <% @last_routes.each do |route| %>
+
+
+   
+ 
+  
+    <div id="routes"><span id="route_name"><strong><%= route.route_name%></strong></span>
+      <p><%= route.route_country%></p>
+     
+     <img src=  <%=route.route_photo%>  height="200" width="300">
+      <%= route.route_description%>
+      Date:<%= route.route_date%>
+      <%= link_to('Show this route', route_points_path(route))%>
+      <%= link_to 'Destroy',route_path(route), method: :delete, data: {confim: "Are you sure?"} %></div>
+    
+      <hr>
+    <% end %>
+
+  
+
+  <br><br><br>
+
+
+
+  
+
+    <div id="more_routes"><%= link_to('Discover more and more routes by country', routes_path)%></div>
+
+    <script type="text/javascript" src="routes.js"></script>
+    </body>
+</html>
