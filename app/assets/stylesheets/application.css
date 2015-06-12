@@ -1,31 +1,52 @@
 
 body{
 	font-family:"Palatino";
-	
+
 
 }
+
+section{
+	margin-left: 100px;
+	color:grey;
+}
+
+
 
 #page_name{
-	font-size: 70px;
-	margin-left:50px;
-	text-shadow: 1 2px white, 1 3px black;
-	margin-top:-200px;
-	color: white;
-
-
-
+	font-size: 80px;
+	margin-left:20px;
+	
+	color: black;
+	margin-bottom: -25px;
+	
 }
 
+.index_title{
+	background:lightgrey;
+	color:white;	
+	padding: 5px;
+	text-shadow: 0.1em 0.1em 0.2em black;
+	margin-top:10px;
+}
+
+.photo{
+	border:solid;
+	color:grey;
+}
+
+
 #page_subtitle{
-	margin-left:55px;
-	color:white;
-	margin-bottom:60px
+	margin-left:25px;
+	color:black;
+	margin-top:20px;
 
 	
 }
 
 
 .index_title{
+	margin-top:-25px;
+	padding-left: 18px;
 
 }
 
@@ -38,6 +59,13 @@ body{
 
 }
 
+#routes{
+	
+	margin-right: 100px;
+	padding-left: 40px;
+	margin-left: 40px;
+	
+}
 
 .container-fluid{
 	margin-top:20px;
@@ -45,5 +73,54 @@ body{
 }
 
 #route_name{
-	font-size: 30px;
+	font-size: 18px;
+}
+
+
+.place_line{
+	font-size: 20px;
+	margin-left: -40px;
+
+	color:grey;
+
+}
+
+.box_map{
+	border:solid;
+	border-color: grey;
+	padding-left: 80px;
+	padding-bottom:10px;
+	background: WhiteSmoke;
+	margin-left: -50px;
+	margin-right:70px;
+	padding-top:20px;
+
+}
+
+
+.point_name{
+	color: grey;
+}
+
+.item{
+	height:460px;
+
+}
+
+.photo_car{
+	height:460px;
+}
+
+#myCarousel{
+	margin-top: -13px;
+}
+
+#add_new{
+	border:solid;
+	padding:30px;
+	margin-right:200px;
+}
+
+#nav{
+	padding-left:10px;
 }

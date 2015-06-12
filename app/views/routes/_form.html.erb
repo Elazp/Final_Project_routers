@@ -10,8 +10,10 @@
     <body>
   
 
-    <section>
-    <h1 class="index_title">Add a new route!</h1>
+    
+    <h1 class="index_title">ADD NEW ROUTE</h1>
+    <br><br>
+    <section id="add_new">
 	<%= form_for @route do |f| %>
 	 <%= f.label :route_name %>
 	 <%= f.text_field :route_name %>
@@ -30,7 +32,7 @@
 
 	 <%= f.submit 'Save' %>
 
-	<p><%= link_to('Show me this route', routes_path)%></p>
+	<p><%= link_to('Back', routes_path)%></p>
 	<% end %>
 	</section>
     <script type="text/javascript" src=""></script>

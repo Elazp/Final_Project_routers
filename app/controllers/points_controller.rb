@@ -2,7 +2,12 @@ class PointsController < ApplicationController
 	
 	def index
 		@route = Route.find params[:route_id]
-		@points = @route.points.order(point_date: :desc)
+		@points = @route.points.order(point_date: :asc)
+		@hash = Gmaps4rails.build_markers(@points) do |point, marker|
+  		marker.lat point.latitude
+  		marker.lng point.longitude
+
+		end
 
 	end
 
