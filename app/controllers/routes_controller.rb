@@ -3,7 +3,7 @@ class RoutesController < ApplicationController
 
 
 def home
-	@last_routes = Route.last_routes(20)
+	@last_routes = Route.last_routes(4)
 end
 
 def index
@@ -11,9 +11,7 @@ def index
 end
 
 def show
-	
-	@route = Route.find params[:id]
-		
+	@route = Route.find params[:id]	
 end
 
 def new

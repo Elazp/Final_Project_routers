@@ -24,36 +24,90 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
+       <div class="container">
+        <div class="row">
+
+         <div class="col-md-8 col-sm-">
        <img class="photo_car" src=  <%=@last_routes.first.route_photo%>  >
-       <div class="carousel-caption">
-        <h3><%=@last_routes.first.route_name%> </h3>
+     
+        </div>
+
+      
+  <br><br>
+         <div class="col-md-3 col-sm-, descrip">
+     <h3><%=@last_routes.first.route_name%> </h3>
         <p><%=@last_routes.first.route_country%> </p>
+       <%=@last_routes.first.route_description%>
+        
+        </div>
+
+          </div>
+            </div>
       </div>
-    </div>
+  
 
     <div class="item">
-      <img  class="photo_car" src=<%=@last_routes.second.route_photo%> >
-      <div class="carousel-caption">
-        <h3><%=@last_routes.second.route_name%> </h3>
+       <div class="container">
+        <div class="row">
+
+         <div class="col-md-8 col-sm-">
+       <img class="photo_car" src=  <%=@last_routes.second.route_photo%>  >
+       
+        </div>
+
+      
+  <br><br>
+         <div class="col-md-3 col-sm-, descrip">
+       <h3><%=@last_routes.second.route_name%> </h3>
         <p><%=@last_routes.second.route_country%> </p>
+       <%=@last_routes.first.route_description%>
+        
+        </div>
+        
+        </div>
       </div>
-    </div>
+          </div>
+
+
+     
+  
 
    <div class="item">
-      <img  class="photo_car"  src=<%=@last_routes.third.route_photo%>  >
-      <div class="carousel-caption">
-        <h3><%=@last_routes.third.route_name%> </h3>
+
+      <div class="col-md-8 col-sm-">
+       <img class="photo_car" src=  <%=@last_routes.third.route_photo%>  >
+     
+        </div>
+
+      
+  <br><br>
+         <div class="col-md-3 col-sm-, descrip">
+      <h3><%=@last_routes.third.route_name%> </h3>
         <p><%=@last_routes.third.route_country%> </p>
-      </div>
+       <%=@last_routes.first.route_description%>
+        
+        </div>
+
     </div>
 
-    <div class="item">
+
       <div class="item">
-      <img  class="photo_car" src=<%=@last_routes.fourth.route_photo%>>
-      <div class="carousel-caption">
-        <h3><%=@last_routes.fourth.route_name%> </h3>
-        <p><%=@last_routes.fourth.route_country%> </p>
-      </div>
+
+      <div class="col-md-8 col-sm-">
+       <img class="photo_car" src=  <%=@last_routes.fourth.route_photo%>  >
+       
+        </div>
+
+      
+  <br><br>
+         <div class="col-md-3 col-sm-, descrip">
+     <h3><%=@last_routes.fourth.route_name%> </h3>
+        <p><%=@last_routes.fourth.route_country%> </p>  
+       <%=@last_routes.first.route_description%>
+        
+        </div>
+
+
     </div>
   </div>
 

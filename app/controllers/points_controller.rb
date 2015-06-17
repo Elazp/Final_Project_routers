@@ -6,8 +6,8 @@ class PointsController < ApplicationController
 		@hash = Gmaps4rails.build_markers(@points) do |point, marker|
   		marker.lat point.latitude
   		marker.lng point.longitude
-
 		end
+	
 
 	end
 

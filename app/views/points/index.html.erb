@@ -12,18 +12,17 @@
 
 <body>
 
-	 <p>Please, add new points to this route! :)</p>
   
-<section>
+
 
 <h1 class="index_title"> <%= @route.route_name %> </h1>
 
-
+<section>
 
 <ul id="routes">
 
 
-<br><br>
+
 <div class="box_map">
 
 
@@ -31,7 +30,7 @@
 <strong><span class="place_line">
 <% @points.each do |point| %>
 
-<%= point.point_name %> =>
+<%= point.point_name %> >
 
 <%end%>
 </span></strong>
@@ -39,17 +38,17 @@
 
 <br><br>
 <div style='width: 800px;'>
-  <div id="map" style='width: 780px; height: 400px;'></div>
+  <div id="multi_overlays" style='width: 800px; height: 400px;'></div>
 </div>
 
 <br>
 <br>
- <p><%= @route.route_country %></p>
-  <p><%= @route.route_description %></p>
-  <p>Date: <%= @route.route_date%></p>
+ <p><span class="dark_letter">Country:</span> <%= @route.route_country %></p>
+  <p><span class="dark_letter">Number of days:</span> <%= @route.route_description %></p>
+  <p><span class="dark_letter">Date:</span> <%= @route.route_date%></p>
 </div>
 
-
+<hr><hr>
 
 
 <br><br>
@@ -65,12 +64,12 @@
 
 
   <div class="col-md-4">
-<img class="photo" src=  <%=point.point_photo%>  height="250" width="350">
+<img class="photo" src=  <%=point.point_photo%>  height="200" width="350">
 </div>
 
   <div class="col-md-5">
-<p>Date:<%= point.point_date%></p>
-<p>Description:<%= point.point_description %></p>
+<p><span class="dark_letter">Date:</span> <%= point.point_date%></p>
+<p><span class="dark_letter">Description: <%= point.point_description %></p>
 
 </div>
 </div>
@@ -91,11 +90,15 @@
 </section>
 
 <script type="text/javascript">
-handler = Gmaps.build('Google');
-handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+var handler = Gmaps.build('Google');
+handler.buildMap({ provider: {}, internal: {id: 'multi_overlays'}}, function(){
+  var markers = handler.addMarkers(<%=raw @hash.to_json %>);
+
+
   handler.bounds.extendWith(markers);
-  handler.fitMapToBounds();
+  
+ handler.fitMapToBounds();
+
 });
 </script>
 </body>

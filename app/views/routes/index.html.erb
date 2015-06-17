@@ -19,13 +19,32 @@
 		
 		<div id="routes"><span id="route_name"><strong> <%= link_to(route.route_name,route_points_path(route)) %>  </strong></span>
 			- <%= link_to(route.route_country,route_points_path(route)) %> 
-			<p><%= route.route_description%></p>
-			Date:<p><%= route.route_date%></p>
-			<p><img class="photo" src=  <%=route.route_photo%>  height="300" width="400"></p>
+
+			<br><br>
+			
+
+			  <div class="container">
+       		 <div class="row">
+
+  			<div class="col-md-4  col-sm-6 col-xs-4">
+			<p><img class="photo" src=  <%=route.route_photo%>  height="220" width="370"></p>
+			</div>
+
+	
+
+			<div class="col-md-6 col-sm-6 col-xs-12">
+			<br>
+			<p><span class="dark_letter">Date: </span><%= route.route_date%></p>
+			<p><span class="dark_letter">Description: </span><%= route.route_description%></p>
+			</div>
+
+			</div>
+			</div>
 			
 			<%= link_to 'Destroy',route_path(route), method: :delete, data: {confim: "Are you sure?"} %></div>
 		
 			<hr>
+			<br>
 	
 	<% end %>
 
