@@ -3,7 +3,7 @@ class RoutesController < ApplicationController
 
 
 def home
-	@last_routes = Route.last_routes(4)
+	@last_routes = Route.last_routes(5)
 end
 
 def index
@@ -21,7 +21,7 @@ end
 def create
 		@route = Route.new route_params
 		 if @route.save
-			redirect_to @route
+			redirect_to routes_path
 		else
 			render 'new'
 		end

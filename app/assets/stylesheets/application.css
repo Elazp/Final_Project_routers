@@ -92,6 +92,7 @@ section{
 
 	font-size: 20px;
 	margin-left: -40px;
+	color:black;
 
 }
 
@@ -130,7 +131,6 @@ section{
 }
 
 #add_new{
-	border:solid;
 	padding:50px;
 	margin-top:-40px;
 	
@@ -162,4 +162,24 @@ section{
 	border:solid;
 	border-color:white;
 	border-width: 10px;
+}
+
+
+.discover{
+	color:white;
+	font-size:35px;
+	opacity: 0.75;
+	filter:  alpha(opacity=50);
+	margin-top:180px;
+
+
+}
+
+
+.add_point{
+	margin-left:400px;
+}
+
+.back_routes{
+	margin-left:1100px;
 }

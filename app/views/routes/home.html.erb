@@ -19,96 +19,59 @@
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
     <li data-target="#myCarousel" data-slide-to="3"></li>
+     <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-    <div class="item active">
+
+  <div class="item active">
        <div class="container">
         <div class="row">
 
-         <div class="col-md-8 col-sm-">
-       <img class="photo_car" src=  <%=@last_routes.first.route_photo%>  >
+      
+
+         <div class="col-md-2 col-sm-10 col-xs-2">
+      <img class="photo_car" src= "http://global-gallivanting.com/wp-content/uploads/2014/03/backpackersit.jpg">
+      
+      </div>
+
+
+      <div class="col-md-10 col-sm-2 col-xs-2, discover">
+       
+        <p>DO YOU WANT</p> <p>TO DISCOVER </p> NEW PLACES?</p>
+      </div>
+
+          </div>
+            </div>
+    
+    </div>
+
+     <% @last_routes.each do |route| %>
+    <div class="item ">
+       <div class="container">
+        <div class="row">
+
+         <div class="col-md-8 col-sm-10 col-xs-2">
+       <img class="photo_car" src=  <%=route.route_photo%>  >
      
         </div>
 
       
   <br><br>
-         <div class="col-md-3 col-sm-, descrip">
-     <h3><%=@last_routes.first.route_name%> </h3>
-        <p><%=@last_routes.first.route_country%> </p>
-       <%=@last_routes.first.route_description%>
-        
+         <div class="col-md-3 col-sm-2 col-xs-2, descrip">
+     <h3><%= link_to(route.route_name,route_points_path(route)) %> </h3>
+        <p><%=route.route_country%> </p>
+       <%=route.route_description%>
         </div>
 
           </div>
             </div>
       </div>
   
-
-    <div class="item">
-       <div class="container">
-        <div class="row">
-
-         <div class="col-md-8 col-sm-">
-       <img class="photo_car" src=  <%=@last_routes.second.route_photo%>  >
-       
-        </div>
-
-      
-  <br><br>
-         <div class="col-md-3 col-sm-, descrip">
-       <h3><%=@last_routes.second.route_name%> </h3>
-        <p><%=@last_routes.second.route_country%> </p>
-       <%=@last_routes.first.route_description%>
-        
-        </div>
-        
-        </div>
-      </div>
-          </div>
-
-
-     
-  
-
-   <div class="item">
-
-      <div class="col-md-8 col-sm-">
-       <img class="photo_car" src=  <%=@last_routes.third.route_photo%>  >
-     
-        </div>
-
-      
-  <br><br>
-         <div class="col-md-3 col-sm-, descrip">
-      <h3><%=@last_routes.third.route_name%> </h3>
-        <p><%=@last_routes.third.route_country%> </p>
-       <%=@last_routes.first.route_description%>
-        
-        </div>
-
-    </div>
-
-
-      <div class="item">
-
-      <div class="col-md-8 col-sm-">
-       <img class="photo_car" src=  <%=@last_routes.fourth.route_photo%>  >
-       
-        </div>
-
-      
-  <br><br>
-         <div class="col-md-3 col-sm-, descrip">
-     <h3><%=@last_routes.fourth.route_name%> </h3>
-        <p><%=@last_routes.fourth.route_country%> </p>  
-       <%=@last_routes.first.route_description%>
-        
-        </div>
-
-
-    </div>
+    <%end%>
+    
   </div>
 
   <!-- Left and right controls -->

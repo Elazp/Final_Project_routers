@@ -44,7 +44,7 @@
 <br>
 <br>
  <p><span class="dark_letter">Country:</span> <%= @route.route_country %></p>
-  <p><span class="dark_letter">Number of days:</span> <%= @route.route_description %></p>
+  <p><span class="dark_letter">Description:</span> <%= @route.route_description %></p>
   <p><span class="dark_letter">Date:</span> <%= @route.route_date%></p>
 </div>
 
@@ -82,11 +82,11 @@
 
 <hr>
 <% end %>
-  <%= link_to('Add new point in this route',  new_route_point_path)%>
+  <span class="add_point"><%= link_to('Add new point in this route',  new_route_point_path)%></span>
 </ul>
 
 	
-	<%= link_to('Back to routes', routes_path)%>
+	 <span class="back_routes"><%= link_to('Back to routes', routes_path)%></span>
 </section>
 
 <script type="text/javascript">
