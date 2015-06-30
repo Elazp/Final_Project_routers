@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150601153334) do
+ActiveRecord::Schema.define(version: 20150623140722) do
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "list_comment"
+    t.integer  "route_id"
+    t.string   "user_name"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "points", force: :cascade do |t|
     t.integer  "route_id"
@@ -32,11 +40,12 @@ ActiveRecord::Schema.define(version: 20150601153334) do
     t.string   "route_country"
     t.text     "route_description"
     t.string   "user_name"
-    t.date     "route_date"
+    t.date     "route_initial_date"
+    t.date     "route_end_date"
     t.string   "route_comments"
     t.string   "route_photo"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
 end

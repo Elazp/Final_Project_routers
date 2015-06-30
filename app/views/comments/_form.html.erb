@@ -1,0 +1,17 @@
+<section>
+
+<%= form_for [@route, @comment] do |f| %>
+<%= f.label :user_name%>
+<%= f.text_field :user_name %>
+<br>
+<%= f.label :list_comment%>
+<%= f.text_field :list_comment %>
+<br>
+
+<%= f.submit 'Save' %>
+
+<% end %>
+
+	<%= link_to('Back to comments', route_comments_path)%>
+
+</section>

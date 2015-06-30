@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+
+<body>
+
+  
+
+
+<h1 class="index_title"> <%= @route.route_name %> </h1>
+
+
+
+
+<section>
+
+
+<br><br>
+
+<% @comments.each do |comment| %>
+
+<div id="routes">
+<p class="user">User: <%= comment.user_name %> </p>
+<p><%= comment.list_comment %> </p>
+</div>
+
+
+
+
+
+
+
+<hr>
+<% end %>
+ <span class="add_point"><%= link_to('Add new comment to this route',  new_route_comment_path)%></span> 
+</section>
+</body>
+
+</html>

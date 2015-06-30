@@ -6,7 +6,8 @@ class CreateRoutes < ActiveRecord::Migration
       t.string :route_country
       t.text :route_description
       t.string :user_name
-      t.date :route_date
+      t.date :route_initial_date
+      t.date :route_end_date
       t.string :route_comments
       t.string :route_photo
 

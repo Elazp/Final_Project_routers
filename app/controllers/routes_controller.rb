@@ -43,7 +43,7 @@ end
 
 private 
 	def route_params
-		params.require(:route).permit(:route_name, :route_country, :route_description, :route_date, :user_name, :route_comments, :route_photo)
+		params.require(:route).permit(:route_name, :route_country, :route_description, :route_initial_date, :route_end_date, :user_name, :route_comments, :route_photo)
 	end
 
 end

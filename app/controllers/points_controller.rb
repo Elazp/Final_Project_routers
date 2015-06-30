@@ -2,13 +2,11 @@ class PointsController < ApplicationController
 	
 	def index
 		@route = Route.find params[:route_id]
-		@points = @route.points.order(point_date: :asc)
+		@points = @route.points.order(created_at: :asc)
 		@hash = Gmaps4rails.build_markers(@points) do |point, marker|
   		marker.lat point.latitude
   		marker.lng point.longitude
 		end
-	
-
 	end
 
 	def new 
@@ -20,14 +18,14 @@ class PointsController < ApplicationController
 	@route = Route.find params[:route_id]
 	@point = @route.points.new point_params 
 
-	if @point.save
-		flash[:notice] = "Entry created successfully"
-		redirect_to route_points_path(@route)
-	else
-		flash[:alert] = "Entry not created"
-		render 'new'
+		if @point.save
+			flash[:notice] = "Point created successfully"
+			redirect_to route_points_path(@route)
+		else
+			flash[:alert] = "Point not created"
+			render 'new'
+		end
 	end
-end
 
 private
 	def point_params

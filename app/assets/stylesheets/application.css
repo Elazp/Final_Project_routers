@@ -32,9 +32,12 @@ section{
 }
 
 .photo{
+	margin-left: 52px;
+
 	border:solid;
 	color:grey;
 	border-width: 10px;
+
 }
 
 
@@ -182,4 +185,12 @@ section{
 
 .back_routes{
 	margin-left:1000px;
+}
+
+.user{
+	color:black;
+}
+
+.btn-group{
+	margin-left:1020px;
 }

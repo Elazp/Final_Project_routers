@@ -13,6 +13,21 @@
 
 	<h1  class="index_title"> ROUTES BY COUNTRY</h1>
 	<br>
+
+	<!-- Large button group -->
+	<div class="btn-group">
+	  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    Most famous countries <span class="caret"></span>
+	  </button>
+	  <ul class="dropdown-menu">
+		<li><a href="#">China</a></li>
+	    <li><a href="#">Japan</a></li>
+	    <li><a href="#">Cuba</a></li>
+	  </ul>
+	</div>
+	<br><br>
+
+
 	<section>
 	<% @last_routes.each do |route| %>
 
@@ -26,16 +41,19 @@
 			  <div class="container">
        		 <div class="row">
 
-  			<div class="col-md-4  col-sm-6 col-xs-4">
+  			<div class="col-md-5  col-sm-7 col-xs-4">
 			<p><img class="photo" src=  <%=route.route_photo%>  height="220" width="370"></p>
 			</div>
 
 	
 
-			<div class="col-md-6 col-sm-6 col-xs-12">
+			<div class="col-md-6 col-sm-4 col-xs-12">
 			<br>
-			<p><span class="dark_letter">Date of the route: </span><%= route.route_date%></p>
+			<span class="dark_letter"></span><%= route.route_initial_date%>
+			<span class="dark_letter">- </span><%= route.route_end_date%>
 			<p><span class="dark_letter">Description: </span><%= route.route_description%></p>
+			<br><br>
+			<p ><%= link_to('Comments of the route', route_comments_path(route))%></p>
 			</div>
 
 			</div>

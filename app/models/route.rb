@@ -1,10 +1,11 @@
 class Route < ActiveRecord::Base
 	has_many :points
-	attr_accessible :route_name, :route_description, :route_date, :route_country, :route_photo
+	has_many :comments
+	attr_accessible :route_name, :route_description, :route_initial_date, :route_end_date, :route_country, :route_photo
 	
 
 	def self.last_routes(param)
-		Route.order(route_date: :desc).limit param
+		Route.order(route_initial_date: :desc).limit param
 	end
 
 	def self.search route_country
