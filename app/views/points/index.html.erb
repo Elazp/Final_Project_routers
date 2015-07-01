@@ -52,24 +52,24 @@
        <div class="container">
           <div class="row">
 
-              <div class="col-md-2 col-sm-12 col-xs-12">
+              <div class="col-md-1 col-sm-12 col-xs-12">
               <h1 class="point_name"><%= point.point_name %> </h1>
 
               </div>
 
 
               <div class="col-md-5 col-sm-12 col-xs-12 ">
-              <img class="photo" src=  <%=point.point_photo%>  height="200" width="350">
+              <img class="photo" src=  <%=point.point_photo%>  height="200" width="320">
               </div>
 
-              <div class="col-md-5 col-sm-12 col-xs-12, description">
+              <div class="col-md-4 col-sm-12 col-xs-12, description">
               <p><span class="dark_letter">Date:</span> <%= point.point_date%></p>
               <p><span class="dark_letter">Description:</span> <%= point.point_description%></p>
               </div>
 
           </div>
         </div>
-
+        <span class="delete_point"><%= link_to('Delete this point', route_point_path(@route,point), method: :delete, data: {confirm: 'Are you sure?'}) %></span>
           <hr>
       <% end %>
 

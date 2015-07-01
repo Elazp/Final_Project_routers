@@ -27,6 +27,14 @@ class PointsController < ApplicationController
 		end
 	end
 
+	def destroy
+		route = Route.find params[:route_id]
+		point = route.points.find params[:id]
+		point.destroy
+		redirect_to route_points_path
+	end
+
+
 private
 	def point_params
 		params.require(:point).permit(:point_name, :point_description, :point_date, :route_id, :point_comments, :point_photo, :address, :latitude, :longitude)

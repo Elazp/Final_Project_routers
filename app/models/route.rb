@@ -9,7 +9,7 @@ class Route < ActiveRecord::Base
 	end
 
 	def self.search route_country
-    Route.where("route_country LIKE '%" + route_country.to_s  + "%' OR route_name LIKE '%" + route_country.to_s + "%'")
+   		Route.where("route_country LIKE '%" + route_country.to_s  + "%' OR route_name LIKE '%" + route_country.to_s + "%'")
 	end
 
 end

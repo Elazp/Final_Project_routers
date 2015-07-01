@@ -32,8 +32,8 @@
 	<% @last_routes.each do |route| %>
 
 		
-		<div id="routes"><span id="route_name"><strong> <%= link_to(route.route_name,route_points_path(route)) %>  </strong></span>
-			- <%= link_to(route.route_country,route_points_path(route)) %> 
+		<div id="routes"><span id="route_name"><strong> <%= link_to(route.route_name,route_points_path(route)) %>  </strong></span><br>
+			<span class="country"><%= link_to(route.route_country,route_points_path(route)) %> </span>
 
 			<br><br>
 			
@@ -42,24 +42,25 @@
        		 <div class="row">
 
   			<div class="col-md-5  col-sm-7 col-xs-4">
-			<p><img class="photo" src=  <%=route.route_photo%>  height="220" width="370"></p>
+			<p><img class="photo" src=  <%=route.route_photo%>  height="250" width="370"></p>
 			</div>
 
 	
 
 			<div class="col-md-6 col-sm-4 col-xs-12">
 			<br>
-			<span class="dark_letter"></span><%= route.route_initial_date%>
-			<span class="dark_letter">- </span><%= route.route_end_date%>
+			<p><span class="dark_letter"></span><%= route.route_initial_date%>
+			<span class="dark_letter">- </span><%= route.route_end_date%></p>
 			<p><span class="dark_letter">Description: </span><%= route.route_description%></p>
-			<br><br>
-			<p ><%= link_to('Comments of the route', route_comments_path(route))%></p>
+			<br><br><br><br>
+			<%= link_to('Comments of the route', route_comments_path(route))%> &nbsp;&nbsp;&nbsp;
+			<%= link_to 'Destroy',route_path(route), method: :delete, data: {confim: "Are you sure?"} %></div>
 			</div>
 
 			</div>
 			</div>
 			
-			<%= link_to 'Destroy',route_path(route), method: :delete, data: {confim: "Are you sure?"} %></div>
+			
 		
 			<hr>
 			<br>
@@ -70,7 +71,7 @@
 
 	
 
-	<%= link_to('Add new route', new_route_path)%>
+	
 
 
     <script type="text/javascript" src=""></script>

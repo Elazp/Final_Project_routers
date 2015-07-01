@@ -32,7 +32,7 @@ section{
 }
 
 .photo{
-	margin-left: 52px;
+	margin-left: 10px;
 
 	border:solid;
 	color:grey;
@@ -68,7 +68,7 @@ section{
 
 #routes{
 	
-	margin-right: 100px;
+	margin-right: 50px;
 	padding-left: 40px;
 	margin-left: 40px;
 	background: WhiteSmoke ;
@@ -125,8 +125,10 @@ section{
 }
 
 .photo_car{
-	width:1200px;
+	width:1300px;
 	height:500px;
+	margin-left:-50px;
+
 }
 
 #myCarousel{
@@ -136,6 +138,7 @@ section{
 #add_new{
 	padding:50px;
 	margin-top:-40px;
+	
 	
 }
 
@@ -193,4 +196,17 @@ section{
 
 .btn-group{
 	margin-left:1020px;
+}
+
+.point_name{
+	margin-left:-28px;
+}
+
+
+.delete_point{
+	margin-left: 600px;
+}
+
+.country{
+	margin-left:18px;
 }
