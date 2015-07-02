@@ -48,13 +48,14 @@
 	
 
 			<div class="col-md-6 col-sm-4 col-xs-12">
-			<br>
-			<p><span class="dark_letter"></span><%= route.route_initial_date%>
+			<br> 
+			<p><span class="dark_letter">Travel dates: </span><%= route.route_initial_date%>
 			<span class="dark_letter">- </span><%= route.route_end_date%></p>
 			<p><span class="dark_letter">Description: </span><%= route.route_description%></p>
 			<br><br><br><br>
 			<%= link_to('Comments of the route', route_comments_path(route))%> &nbsp;&nbsp;&nbsp;
-			<%= link_to 'Destroy',route_path(route), method: :delete, data: {confim: "Are you sure?"} %></div>
+			<%= link_to("Add point to this route",route_points_path(route)) %> &nbsp;&nbsp;&nbsp;
+			<%= link_to 'Delete this route',route_path(route), method: :delete, data: {confim: "Are you sure?"} %></div>
 			</div>
 
 			</div>
